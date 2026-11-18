@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Ladder Head-to-Head</title>
+  <meta name="description" content="Compare two TrackMania United Forever logins across every official track, powered by the UnitedLadder API.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <p class="eyebrow">TrackMania United Forever · Official mode</p>
+      <h1>Ladder <em>Head-to-Head</em></h1>
+      <p class="lede">Enter two logins and see who comes out ahead across every official track.</p>
+    </header>
+
+    <form id="form" class="picker" autocomplete="off">
+      <label class="field a">
+        <span>Player 1 login</span>
+        <input id="loginA" name="a" type="text" placeholder="e.g. redgreendevil" spellcheck="false" autocapitalize="off" required>
+      </label>
+      <button type="button" id="swap" class="swap" aria-label="Swap players" title="Swap players">⇄</button>
+      <label class="field b">
+        <span>Player 2 login</span>
+        <input id="loginB" name="b" type="text" placeholder="e.g. fwo_axell" spellcheck="false" autocapitalize="off" required>
+      </label>
+      <button type="submit" id="go" class="go">Compare</button>
+    </form>
+    <p class="hint">Logins, not nicknames — the lowercase ID from the ladder profile. <button type="button" id="example" class="link">Try an example</button></p>
+
+    <div id="status" class="status" role="status" aria-live="polite" hidden></div>
+    <section id="result" aria-live="polite" hidden></section>
+
+    <footer class="foot">
+      Data from the <a href="https://ul.unitedascenders.xyz" target="_blank" rel="noopener">UnitedLadder</a> API (UnitedAscenders). Not affiliated.
+    </footer>
+  </main>
+  <noscript><p class="wrap">This page needs JavaScript to talk to the UnitedLadder API.</p></noscript>
+  <script src="app.js"></script>
+</body>
+</html>
